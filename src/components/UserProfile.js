@@ -31,6 +31,7 @@ function UserProfile() {
       <h2>User Information</h2>
 
       <p>Name: {user.displayName}</p>
+    setUserName(JSON.stringify(context.user.displayName));
       
       
     </div>
