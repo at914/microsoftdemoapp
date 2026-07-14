@@ -12,7 +12,7 @@ function UserProfile() {
         const context = await app.getContext();
 
         const userNameString = JSON.stringify(
-          context.user.displayName
+          context.user.userPrincipalName
         );
 
         setUserName(userNameString);
