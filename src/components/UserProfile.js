@@ -12,26 +12,23 @@ function UserProfile() {
 
         const context = await app.getContext();
 
-        const userNameString = JSON.stringify(
-          context.user.userPrincipalName
-        );
+        // Get UPN directly (no JSON.stringify)
+        const userPrincipalName = context.user.userPrincipalName || "";
 
         const capitalize = (str) =>
-          str.charAt(0).toUpperCase() + str.slice(1);
+          str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 
+        // Extract name before @
+        const namePart = userPrincipalName.split("@")[0];
 
+        // Split first and last name
+        const [firstName = "", lastName = ""] = namePart.split(".");
 
-        const namePart = userNameString.split("@")[0];
-
-        const [firstName, lastName] = namePart.split(".");
-
-        const fullName = `${capitalize(firstName)} ${capitalize(lastName)}`;
+        const fullName = `${capitalize(firstName)} ${capitalize(lastName)}`.trim();
 
         setUserName(fullName);
-
-
       } catch (error) {
-        console.error(error);
+        console.error("Error loading user:", error);
       }
     }
 
