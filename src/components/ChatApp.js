@@ -1,7 +1,7 @@
 import React from "react";
 import '../style/ChatApp.css'
 
-const ChatApp = () => {
+const ChatApp = (props) => {
   return (
     <div className="chat-app">
       {/* Sidebar */}
@@ -36,9 +36,9 @@ const ChatApp = () => {
         {/* Header */}
         <header className="chat-header">
           <h2>Chatboat App</h2>
-          <button className="profile-btn">
-            User Profile
-          </button>
+          <h2 className="profile-btn">
+            Hello {props.userName}
+          </h2>
         </header>
 
         {/* Messages */}
