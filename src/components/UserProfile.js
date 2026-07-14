@@ -31,8 +31,7 @@ function UserProfile() {
       <h2>User Information</h2>
 
       <p>Name: {user.displayName}</p>
-      <p>Email: {user.userPrincipalName}</p>
-      <p>ID: {user.id}</p>
+      
       <pre>{JSON.stringify(user, null, 2)}</pre>
     </div>
   );
