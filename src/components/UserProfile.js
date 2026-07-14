@@ -32,7 +32,7 @@ function UserProfile() {
 
       <p>Name: {user.displayName}</p>
       
-      <pre>{JSON.stringify(user, null, 2)}</pre>
+      
     </div>
   );
 }
