@@ -10,7 +10,8 @@ function UserProfile() {
         await app.initialize();
 
         const context = await app.getContext();
-
+        const userName = context.user.displayName;
+const userNameString = JSON.stringify(userName);
         console.log(context.user);
 
         setUser(context.user);
@@ -31,7 +32,7 @@ function UserProfile() {
       <h2>User Information</h2>
 
       <p>Name: {user.displayName}</p>
-    <pre>{JSON.stringify(context.user.displayName)}</pre>
+    <p>{userNameString}</p>
       
       
     </div>
