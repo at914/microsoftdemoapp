@@ -16,19 +16,19 @@ function UserProfile() {
         );
 
         const capitalize = (str) =>
-  str.charAt(0).toUpperCase() + str.slice(1);
+          str.charAt(0).toUpperCase() + str.slice(1);
 
 
 
-const namePart = userNameString.split("@")[0];
+        const namePart = userNameString.split("@")[0];
 
-const [firstName, lastName] = namePart.split(".");
+        const [firstName, lastName] = namePart.split(".");
 
-const fullName = `${capitalize(firstName)} ${capitalize(lastName)}`;
+        const fullName = `${capitalize(firstName)} ${capitalize(lastName)}`;
 
-setUserName(fullName);
+        setUserName(fullName);
 
-        
+
       } catch (error) {
         console.error(error);
       }
@@ -40,7 +40,7 @@ setUserName(fullName);
   return (
     <div>
       <h2>User Information</h2>
-      <p>{userName}</p>
+      <p userName={userName}></p>
     </div>
   );
 }
