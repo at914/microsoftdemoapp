@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { app } from "@microsoft/teams-js";
+import ChatApp from "./ChatApp";
 
 function UserProfile() {
   const [userName, setUserName] = useState("");
@@ -40,7 +41,7 @@ function UserProfile() {
   return (
     <div>
       <h2>User Information</h2>
-      <p userName={userName}></p>
+      <ChatApp userName={userName} />
     </div>
   );
 }
