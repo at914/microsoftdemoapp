@@ -15,7 +15,20 @@ function UserProfile() {
           context.user.userPrincipalName
         );
 
-        setUserName(userNameString);
+        const capitalize = (str) =>
+  str.charAt(0).toUpperCase() + str.slice(1);
+
+
+
+const namePart = userNameString.split("@")[0];
+
+const [firstName, lastName] = namePart.split(".");
+
+const fullName = `${capitalize(firstName)} ${capitalize(lastName)}`;
+
+setUserName(fullName);
+
+        
       } catch (error) {
         console.error(error);
       }
