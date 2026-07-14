@@ -40,7 +40,6 @@ function UserProfile() {
 
   return (
     <div>
-      <h2>User Information</h2>
       <ChatApp userName={userName} />
     </div>
   );
