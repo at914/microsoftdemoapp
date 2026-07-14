@@ -36,7 +36,7 @@ const ChatApp = (props) => {
         {/* Header */}
         <header className="chat-header">
           <h2>Chatboat App</h2>
-          <h2 className="profile-btn">
+          <h2>
             Hello {props.userName}
           </h2>
         </header>
