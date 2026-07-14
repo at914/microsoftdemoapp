@@ -31,7 +31,7 @@ function UserProfile() {
       <h2>User Information</h2>
 
       <p>Name: {user.displayName}</p>
-    <p>context.user.displayName</p> 
+    <pre>{JSON.stringify(context.user.displayName)}</pre>
       
       
     </div>
