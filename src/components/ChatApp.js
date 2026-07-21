@@ -35,7 +35,7 @@ const ChatApp = (props) => {
       <main className="chat-container">
         {/* Header */}
         <header className="chat-header">
-          <h2>Chatboat App</h2>
+          <h2>Microsoft Teams App Integration</h2>
           <h2>
             Hello, {props.userName}
           </h2>
@@ -70,7 +70,7 @@ const ChatApp = (props) => {
             type="text"
             placeholder="Type your message..."
           />
-          <button>Send</button>
+          <button className="sendData">Send</button>
         </footer>
       </main>
     </div>
